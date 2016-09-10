@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+</head>
+<body>
+    <img  onclick='ChangeCode();' id='imgCode' src='/checkcode' title='看不清？换一张' />
+
+    <script type="text/javascript">
+	    function ChangeCode() {
+            var code = document.getElementById('imgCode');
+            code.src = '/checkcode?'+ new Date().getTime();
+        }
+    </script>
+</body>
+</html>
